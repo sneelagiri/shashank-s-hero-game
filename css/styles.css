@@ -1,0 +1,44 @@
+html {
+  text-align: center;
+}
+
+body {
+  padding-top: 40px;
+}
+
+#nameDisplay, #health, #weaponType, #weaponDamage {
+  color: darkblue;
+}
+
+h1 {
+  color: darkorange
+}
+
+#inn, #dagger, #bag, #enemyPhoto{
+  max-width: 25%;
+  max-height: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+
+#inn:hover, #dagger:hover, #bag:hover, #enemyPhoto:hover {background-color: #3e8e41}
+
+#inn:active, #dagger:active, #bag:active, #enemyPhoto:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#enemyPhoto {
+  margin-bottom: 50px;
+}

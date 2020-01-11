@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="lib/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+ <!-- 👍 YOUR HTML HERE 👍 -->
+ <h1>Adventures of the Old World</h1>
+
+  <form>Name your hero!
+    <div class="formBox">
+      <input type="text" id="name" placeholder="e.g. Geralt of Rivia"/>
+    </div>
+
+    
+    <div class="formBox"> 
+      <button id="btn" onclick="displayStats()">Save</button>
+    </div>
+  </form>
+
+  <div id="nameDisplay"></div>
+  <div id="health"></div>
+  <div id="weaponType"></div>
+  <div id="weaponDamage"></div>
+  
+  <div class="rest">
+    <h2>Rest</h2>
+    <img id = inn src="https://storage.needpix.com/rsynced_images/british-pub-signs-the-new-inn.jpg" alt="Cosy inn" onclick="rest(hero)">
+  </div>
+  <h2>Pick up item</h2>
+  <div class="pickUpItem">
+    <img id="dagger" src="https://cdn.pixabay.com/photo/2012/04/14/15/05/dagger-34230_960_720.png" alt="Pick up a dagger" onclick="pickUpItem(hero, hero.weapon)">
+  </div>
+  <div class="equipWeapon">
+    <h2>Equip weapon</h2>
+    <img id="bag" src="https://www.goodfreephotos.com/albums/weapons/hand-holding-sword.jpg" alt="Equip dagger from inventory" onclick="equipWeapon(hero)">
+  </div>
+   
+  <div id ="fightEnemy">
+    <h2>Fight Enemy</h2>
+    <img id="enemyPhoto" src="https://cdn.pixabay.com/photo/2018/02/17/09/33/fantasy-3159493_1280.jpg" alt="Fight a powerful enemy" onclick="fightEnemy()">
+  </div>
+  
+
+  <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
+  <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
+  <div id="mocha">
+  <!-- MOCHA TEST FEEDBACK WILL BE RENDERED HERE -->
+  </div>
+
+  <script src="lib/chai.js"></script>
+  <script src="lib/mocha.js"></script>
+  <script src="lib/sinon.js"></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="YOUR_JAVASCRIPT_HERE.js"></script>
+  <script src="lib/game_logic.test.js"></script>
+
+</body>
+</html>
